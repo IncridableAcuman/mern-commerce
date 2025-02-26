@@ -1,0 +1,20 @@
+module.exports=class UserDTO{
+    id;
+    googleId
+    username;
+    email;
+    role;
+    profilePic;
+    projects
+    createdAt;
+    constructor(model){
+        this.id=model.id;
+        this.googleId=model.googleId
+        this.username=model.username;
+        this.email=model.email;
+        this.role=model.role;
+        this.profilePic=model.profilePic;
+        this.projects=model.projects
+        this.createdAt=model.createdAt;
+    }
+}
