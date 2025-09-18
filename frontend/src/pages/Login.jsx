@@ -69,11 +69,6 @@ const Login = () => {
           onChange={(e)=>setPassword(e.target.value)}  />
                  <p className='text-blue-500 cursor-pointer hover:underline transition' onClick={()=>navigate("/forgot-password")}>Forgot Password?</p>
 
-            <button className='flex items-center gap-3 justify-center text-center w-full border p-2 rounded-full
-             cursor-pointer hover:bg-gary-100 transition' onClick={handleGoogleLogin}>
-            <p>{isLogin ? "Sign In with Google" : "Sign Up with Google"}</p>
-            <img src="/image.png" alt="google" className='w-8 h-8 rounded-full' />
-          </button>
           <button type="submit" 
          className='w-full p-3 bg-blue-500 rounded-xl text-white hover:bg-blue-600 transition' >{isLogin ? "Sign In" : "Sign Up"}</button>
         </form>

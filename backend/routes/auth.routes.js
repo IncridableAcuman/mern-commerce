@@ -11,15 +11,4 @@ router.post('/logout',authController.logOut);
 router.get('/refresh',authController.refresh);
 router.post('/forgot-password',body('email').isEmail(),body('password').isLength({min:8,max:1024}),authController.forgotPassword);
 router.put('/reset-password',body('email').isEmail(),body('password').isLength({min:8,max:1024}),authController.resetPassword);
-
-router.get(
-    "/google",
-    passport.authenticate("google", { scope: ["profile", "email"] })
-  );
-  
-  router.get(
-    "/google/callback",
-    passport.authenticate("google", { failureRedirect: "/login", session: false }),
-    authController.googleAuth
-  );
 module.exports=router;
