@@ -1,7 +1,10 @@
+import Navbar from "../components/Navbar"
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className="w-full h-screen">
+      <Navbar/>
+    </div>
   )
 }
 
