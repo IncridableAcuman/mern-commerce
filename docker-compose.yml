@@ -17,7 +17,7 @@ services:
       dockerfile: Dockerfile
     container_name: mern-frontend
     ports:
-      - "3000:80"
+      - "5173:80"
     depends_on:
       - backend
   
@@ -28,7 +28,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/mongo
+      - mongo_data:/data/db
 
 volumes:
   mongo_data:
