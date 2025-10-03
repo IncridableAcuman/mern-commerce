@@ -21,7 +21,29 @@ const productSchema=new Schema({
         type:String,
         required:true,
         enum:["Salad","Rolls","Deserts","Sandwich","Cake","PureVeg","Pasta","Noodles"]
+    },
+    image:{
+        type:String,
+        required:true
+    },
+    stock:{
+        type:Number,
+        required:true,
+        min:0,
+        max:1000
+    },
+    brand:{
+        type:String,
+        required:true,
+        minlength:2,
+        maxlength:50
+    },
+    ratings:{
+        type:Number,
+        default:0,
+        min:0,
+        max:5
     }
 },{timestamps:true});
-const Product=model("Product",model("Product",productSchema));
+const Product=model("Product",productSchema);
 module.exports=Product;
